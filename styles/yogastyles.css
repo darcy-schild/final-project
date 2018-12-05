@@ -10,14 +10,11 @@ body {
     margin-right: auto;
 }
 
-#section1 {
 
+a {
+    color: #4C7B99;
 }
 
-#section2 {
-
-}
-
-#section3 {
-
+a:hover {
+    color: #FFFFFF;
 }
