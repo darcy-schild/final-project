@@ -3,6 +3,7 @@
 $(document).ready(() => {
 
 
+
 // group of cards in second div
 
     $('#card1').hide();
