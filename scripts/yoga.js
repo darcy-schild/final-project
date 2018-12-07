@@ -3,17 +3,20 @@
 $(document).ready(() => {
 
 
+// group of cards in second div
+
     $('#card1').hide();
     $('#card2').hide();
     $('#card3').hide();
     $('#card4').hide();
+
 
     $('#button1').on('click', () => {
       $('.card1').hide();
       $('.card2').hide();
       $('.card3').hide();
       $('.card4').hide();
-       $('#card1').show();
+       $('#card1').toggle();
 
   });
 
@@ -22,7 +25,7 @@ $(document).ready(() => {
     $('.card2').hide();
     $('.card3').hide();
     $('.card4').hide();
-     $('#card2').show();
+     $('#card2').toggle();
 
 });
 
@@ -31,7 +34,7 @@ $('#button3').on('click', () => {
   $('.card2').hide();
   $('.card3').hide();
   $('.card4').hide();
-   $('#card3').show();
+   $('#card3').toggle();
 
 });
 
@@ -41,7 +44,7 @@ $('#button4').on('click', () => {
   $('.card2').hide();
   $('.card3').hide();
   $('.card4').hide();
-   $('#card4').show();
+   $('#card4').toggle();
 
 });
 });

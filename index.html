@@ -7,8 +7,9 @@
 
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
 
-
   <link rel="stylesheet" href="styles/yogastyles.css">
+
+  <script src="https://code.highcharts.com/highcharts.js"></script>
 
   <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
 
@@ -21,6 +22,7 @@
 
       <p class="text-center pt-3">A look at yoga as a practice in the United States and the trends and effects it has inspired.</p>
 
+<!-- button group nav bar-->
 <div class="text-center">
   <div class="btn-group" role="group" aria-label="Basic example">
       <button type="button" class="btn btn-outline-dark"> <a href="#section1"> Why try yoga?</a></button>
@@ -38,25 +40,45 @@
 
       <img src="images/pants.gif">
 
-    <p>A large proportion of U.S. adults who practiced yoga perceived benefits from its use.</p>
+    <p>Why is that? Are yoga pants just a comfortable alternative to jeans or other wardrobe options, or are more people in the U.S. actually exercising, or specifically, practicing yoga?</p>
 
-<!-- first section of cards -->
+<!-- chart1 collapse -->
+    <p>
+      <a class="btn btn-outline-dark" data-toggle="collapse" href="#multiCollapseExample1" role="button" aria-expanded="false" aria-controls="multiCollapseExample1"><strong>Data:</strong> Yoga usage in 2012 vs. 2017</button></a>
+    </p>
+    <div class="row">
+      <div class="col">
+        <div class="collapse multi-collapse" id="multiCollapseExample1">
+          <div class="card card-body">
+            <div id="chart1">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <p>According to the <a href="https://nccih.nih.gov/health/yoga/introduction.htm#hed7">2017 National Health Survey</a> from the National Institutes of Health, a large proportion of U.S. adults who practiced yoga perceived these benefits.</p>
+
+
+
+<!-- first group of cards -->
 <div class="card-group">
-    <div class="card" style="width: 14rem;">
+    <div id="c1" class="card" style="width: 14rem;">
         <img class="card-img-top" src="images/stress.png" alt="Card image cap">
           <div class="card-body">
                 <p class="card-text">86 percent said that practicing yoga reduced stress.</p>
               </div>
             </div>
 
-        <div class="card" style="width: 14rem;">
+        <div id="c2" class="card" style="width: 14rem;">
               <img class="card-img-top" src="images/exercise.png" alt="Card image cap">
                   <div class="card-body">
                       <p class="card-text">63 percent said that practicing yoga motivated them to eat healthier.</p>
                         </div>
                       </div>
 
-      <div class="card" style="width: 14rem;">
+      <div id="c3" class="card" style="width: 14rem;">
             <img class="card-img-top" src="images/sleep.png" alt="Card image cap">
                 <div class="card-body">
                     <p class="card-text">59 percent said that practicing yoga improved their sleep.</p>
@@ -64,19 +86,14 @@
               </div>
         </div>
 
-
-
-
-
-
-    </div>
+<br>
 
 
   <div class="container pt-5" id="section2">
     <h2>Find your flow</h2>
     <p>Learn about the different forms of yoga and discover which one might be best for you.</p>
 
-<!-- button for cards -->
+<!-- button group for second group of cards -->
             <div class="btn-group" role="group">
                 <button type="button" class="btn btn-outline-dark" id="button1">Vinyasa yoga</button>
                 <button type="button" class="btn btn-outline-dark" id="button2">Fitness yoga</button>
@@ -86,7 +103,7 @@
       </div>
 
 
-<!-- cards -->
+<!-- second group of cards -->
    <div class="container">
     <div class="row">
       <div class="col-sm-6">
@@ -177,6 +194,68 @@
 
     <script src="scripts/jquery.min.js"></script>
     <script src="scripts/yoga.js"></script>
+
+    <script>
+    Highcharts.chart('chart1', {
+chart: {
+type: 'bar'
+},
+title: {
+text: 'U.S. Adults and Children Who Practiced Yoga in 2012 and 2017'
+},
+subtitle: {
+text: 'Source: <a href="https://nccih.nih.gov/research/statistics/NHIS/2017">National Health Interview Survey 2017, National Institutes of Health</a>'
+},
+xAxis: {
+categories: ['Adults', 'Children'],
+title: {
+    text: null
+}
+},
+yAxis: {
+min: 0,
+title: {
+    text: 'Percentage of people in U.S. using yoga',
+    align: 'high'
+},
+labels: {
+    overflow: 'justify'
+}
+},
+tooltip: {
+valueSuffix: '%'
+},
+plotOptions: {
+bar: {
+    dataLabels: {
+        enabled: true
+    }
+}
+},
+legend: {
+layout: 'vertical',
+align: 'right',
+verticalAlign: 'top',
+x: -40,
+y: 80,
+floating: true,
+borderWidth: 1,
+backgroundColor: ((Highcharts.theme && Highcharts.theme.legendBackgroundColor) || '#FFFFFF'),
+shadow: true
+},
+credits: {
+enabled: false
+},
+series: [{
+name: '2012',
+data: [9.5, 3.1,]
+}, {
+name: '2017',
+data: [14.3, 8.4,]
+}]
+});
+
+    </script>
 
 
 </body>
