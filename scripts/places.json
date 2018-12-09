@@ -1,0 +1,10 @@
+places = [{"name":"California","lat":37.63677,"long":-120.164962,"description":"accounts for 13.2% of total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"New York","lat":40.71444,"long":-73.952125,"description":"accounts for 9.5% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Florida","lat":28.359171,"long":-81.564055,"description":"accounts for 7.6% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Texas","lat":31.200849,"long":-99.089451,"description":"accounts for 4.9% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Washington","lat":47.144732,"long":-120.775928,"description":"accounts for 4.8% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Colorado","lat":39.001471,"long":-106.342385,"description":"accounts for 4.1% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Illinois","lat":40.164374,"long":-88.995668,"description":"accounts for 3.8% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Pennsylvania","lat":40.806082,"long":-77.899112,"description":"accounts for 3.2% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"Massachusetts","lat":42.355922,"long":-72.125278,"description":"accounts for 3.1% total yoga and pilates establishments in the U.S.","":null,"":null,"":null},
+{"name":"North Carolina","lat":35.409785,"long":-79.974902,"description":"accounts for 2.7% total yoga and pilates establishments in the U.S.","":null,"":null,"":null}]

@@ -3,6 +3,21 @@
 $(document).ready(() => {
 
 
+  $('#stat1').hide();
+  $('#statcap1').hide();
+  $('#stat2').hide();
+  $('#statcap2').hide();
+
+
+  $('#buttonA').on('click',() => {
+      $('#stat1').toggle();
+      $('#statcap1').toggle();
+  });
+
+  $('#buttonB').on('click',() => {
+      $('#stat2').toggle();
+      $('#statcap2').toggle();
+  });
 
 // group of cards in second div
 
