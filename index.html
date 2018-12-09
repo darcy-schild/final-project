@@ -50,9 +50,7 @@
 
       <img src="images/pants.gif" alt="animated GIF of pants">
 
-    <p>You may be thinking that yoga pants are just in higher demand because they're simply a comfortable alternative to jeans or other wardrobe options.</p>
-    <p>One thing's for sure, though: It is true that people in the U.S. are increasingly picking up the practice of yoga.
-
+    <p>You may be wondering if yoga pants are just in higher demand simply because for many, they're simply a comfortable alternative to jeans or other wardrobe options. One thing's for sure, though: It is true that people in the U.S. are increasingly picking up the practice of yoga.</p>
 
           <p><button type="button" class="btn btn-outline-dark" id="buttonA"><strong>Data:</strong> Total U.S. yoga users in 2016</button></p>
 
@@ -68,11 +66,22 @@
               <p><small class="text-muted" id="statcap2">Source: <a href="https://www.yogaalliance.org/About_Yoga_Alliance" target="blank">Yoga Alliance,</a> the largest U.S. yoga-related nonprofit organization / <a href="https://www.yogaalliance.org/Learn/About_Yoga/2016_Yoga_in_America_Study/Highlights" target="blank">2016 report</a></small></p>
 
 
+        <img src="images/flowyoga.png" alt="two people doing yoga child's pose" class="img-fluid pb-5">     <p>
+              <a class="btn btn-outline-dark" data-toggle="collapse" href="#chartcollapse2" role="button" aria-expanded="false" aria-controls="chartcollapse2">What's the age distribution of people who do yoga?</button></a>
+            </p>
+            <div class="row">
+              <div class="col">
+                <div class="collapse multi-collapse" id="chartcollapse2">
+                  <div class="card card-body">
+                      <p><small class="text-muted" id="chart2source">Source: <a href="https://www.yogaalliance.org/Portals/0/2016%20Yoga%20in%20America%20Study%20RESULTS.pdf" target="blank">2016 Yoga in America Study, Yoga Alliance</a></small></p>
+                    <div id="chart2">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
 
-        <p>According to reports from <a href="http://clients1.ibisworld.com.lp.hscl.ufl.edu/reports/us/industry/industryoutlook.aspx?entid=4185#IO" target="blank">IBISWorld,</a> over the next five years, revenue of the yoga and pilates industry is expected to grow by 4.4%, "which can [partially] be attributed to the industry’s robust ancillary product sales, such as yoga clothing."</p>
-
-        <img src="images/flowyoga.png" alt="two people doing yoga child's pose" class="img-fluid pb-5">
-
+        
         <p>Read on to explore more about yoga in the United States and why many Americans are jumping on the bandwagon, not just for the comfy pants — but also for the physical and mental health benefits.</p>
 
 <!-- chart1 collapse -->
@@ -89,6 +98,9 @@
         </div>
       </div>
     </div>
+
+
+
 
 <br>
 
@@ -110,7 +122,7 @@
                 </div>
 
 
-                <img src="images/healthy1.gif"  alt="watermelon">
+    <img src="images/healthy1.gif"  alt="watermelon">
 
                         <a class="btn btn-outline-dark" data-toggle="collapse" href="#multiCollapse4" role="button" aria-expanded="false" aria-controls="multiCollapse3">Motivation to eat healthier</button></a>
                                 <div class="row">
@@ -248,6 +260,7 @@
       integrity="sha512-nMMmRyTVoLYqjP9hrbed9S+FzjZHW5gY1TWCHA5ckwXZBadntCNs8kEqAWdrb9O7rxbCaA4lKTIWjDXZxflOcA=="
       crossorigin=""></script>
 
+
     <script>
     Highcharts.chart('chart1', {
 chart: {
@@ -308,7 +321,62 @@ data: [14.3, 8.4,]
 }]
 });
 
-    </script>
+</script>
+
+
+<script>
+
+
+// Build the chart
+Highcharts.chart('chart2', {
+    chart: {
+        plotBackgroundColor: null,
+        plotBorderWidth: null,
+        plotShadow: false,
+        type: 'pie'
+    },
+    title: {
+        text: 'Age distribution of U.S. adults who practiced yoga in 2016'
+    },
+    tooltip: {
+        pointFormat: '{series.name}: <b>{point.percentage:.1f}%</b>'
+    },
+    plotOptions: {
+        pie: {
+            allowPointSelect: true,
+            cursor: 'pointer',
+            dataLabels: {
+                enabled: true,
+                format: '<b>{point.name}</b>: {point.percentage:.1f} %',
+                style: {
+                    color: (Highcharts.theme && Highcharts.theme.contrastTextColor) || 'black'
+                }
+            }
+        }
+    },
+    series: [{
+        name: 'Usage',
+        colorByPoint: true,
+        data: [{
+            name: 'Ages 18 to 29',
+            y: 19
+        }, {
+            name: 'Ages 30 to 30',
+            y: 23
+        }, {
+            name: 'Ages 40 to 49',
+            y: 20
+        }, {
+            name: 'Ages 50 to 59',
+            y: 17
+        }, {
+            name: 'Ages 60+',
+            y: 21
+        }]
+    }]
+});
+
+</script>
 
     <script>
     let mymap = L.map('map1').setView([39.620, -94.160], 3.65);
