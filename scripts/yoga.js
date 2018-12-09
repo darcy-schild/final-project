@@ -2,6 +2,7 @@
 
 $(document).ready(() => {
 
+// toggle numbers about yoga population in first div
 
   $('#stat1').hide();
   $('#statcap1').hide();
@@ -19,7 +20,7 @@ $(document).ready(() => {
       $('#statcap2').toggle();
   });
 
-// group of cards in second div
+// group of cards in second 'find your flow' div
 
     $('#card1').hide();
     $('#card2').hide();
@@ -28,38 +29,22 @@ $(document).ready(() => {
 
 
     $('#button1').on('click', () => {
-      $('.card1').hide();
-      $('.card2').hide();
-      $('.card3').hide();
-      $('.card4').hide();
        $('#card1').toggle();
 
   });
 
   $('#button2').on('click', () => {
-    $('.card1').hide();
-    $('.card2').hide();
-    $('.card3').hide();
-    $('.card4').hide();
      $('#card2').toggle();
 
 });
 
 $('#button3').on('click', () => {
-  $('.card1').hide();
-  $('.card2').hide();
-  $('.card3').hide();
-  $('.card4').hide();
    $('#card3').toggle();
 
 });
 
 
 $('#button4').on('click', () => {
-  $('.card1').hide();
-  $('.card2').hide();
-  $('.card3').hide();
-  $('.card4').hide();
    $('#card4').toggle();
 
 });
