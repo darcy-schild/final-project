@@ -10,6 +10,12 @@ body {
     margin-right: auto;
 }
 
+#map1 {
+    height: 400px;
+    max-width: 70%;
+}
+
+
 
 a {
     color: #CC9B9F;
