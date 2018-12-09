@@ -15,6 +15,9 @@ body {
     max-width: 70%;
 }
 
+#footer {
+    background-color: #FFFFFF;
+}
 span {
     background-color: #fff8ef;
     padding-right: 0.5rem;
