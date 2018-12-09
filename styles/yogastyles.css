@@ -15,7 +15,10 @@ body {
     max-width: 70%;
 }
 
-
+span {
+    background-color: #fff8ef;
+    padding-right: 0.5rem;
+}
 
 a {
     color: #CC9B9F;
