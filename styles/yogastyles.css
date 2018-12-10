@@ -31,12 +31,17 @@ a:hover {
     color: #A1CCC8;
 }
 
-@media (min-width: 576px) {
+@media (max-width: 575.98px) {
+
       #chart {
           max-width: 60%;
       }
 
       #btngroup2 {
-          max-width: 100%;
+          max-width: 100px;
+      }
+
+      #map1 {
+        max-width: 80%;
       }
   }
