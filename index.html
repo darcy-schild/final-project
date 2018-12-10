@@ -2,8 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Yoga in America</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">  <title>Yoga in America</title>
 
 
 
@@ -15,6 +14,7 @@
   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA==" crossorigin="">
 
   <link rel="stylesheet" href="styles/yogastyles.css">
+
 
   <script src="https://code.highcharts.com/highcharts.js"></script>
 
@@ -237,8 +237,9 @@
 
   <div class="container ml-5 pt-5" id="section3">
     <h2><span>Explore yoga near you</span></h2>
-      <p>This map displays the distribution of yoga and pilates establishments throughout the United States, according to a 2016 report from IBISWorld. Find where your state stacks up! Use the search tool or click on a pin to learn more.
-    <p>map</p>
+      <p>This map displays the distribution of yoga and pilates establishments throughout the United States, according to a <a href="http://clients1.ibisworld.com.lp.hscl.ufl.edu/reports/us/industry/productsandmarkets.aspx?entid=4185#MM" target="blank">2016 report from IBISWorld</a>. Discover where your state stacks up! Use the search tool or click on a pin to learn more.</p>
+
+        <p class="small">Copyright (c) 2016 Michal Haták</small></p>
         <div id="map1"></div>
 
   </div>
@@ -330,7 +331,7 @@ data: [14.3, 8.4,]
 <script>
 
 
-// Build the chart
+
 Highcharts.chart('chart2', {
     chart: {
         plotBackgroundColor: null,
@@ -381,23 +382,22 @@ Highcharts.chart('chart2', {
 
 </script>
 
-    <script>
-    let mymap = L.map('map1').setView([39.620, -94.160], 3.65);
+<script>
+     let mymap = L.map('map1').setView([49.818, -113.288], 2.54);
 
-    L.tileLayer('https://api.mapbox.com/styles/v1/darcyschild/cjph3oqm20g1k2sqrzobb5890/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGFyY3lzY2hpbGQiLCJhIjoiY2pveWdoYnZoMW1vbjN2cnEzOWIycmd0ZiJ9.dkdzij7poWyWtj7_ARrfCQ', {
+  L.tileLayer('https://api.mapbox.com/styles/v1/darcyschild/cjph3oqm20g1k2sqrzobb5890/tiles/256/{z}/{x}/{y}@2x?access_token=pk.eyJ1IjoiZGFyY3lzY2hpbGQiLCJhIjoiY2pveWdoYnZoMW1vbjN2cnEzOWIycmd0ZiJ9.dkdzij7poWyWtj7_ARrfCQ', {
     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, <a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
     maxZoom: 18
-}).addTo(mymap);
+ }).addTo(mymap);
 
 
-    for ( let i = 0; i < places.length; i++ ) {
-        L.marker( [ places[i].lat, places[i].long ] )
-        .bindPopup ('<h3>' + places[i].name + '</h3>' + '<p>' + places[i].description + '<p>').addTo( mymap );
-    }
-
-  </script>
+ for ( let i = 0; i < places.length; i++ ) {
+   L.marker( [ places[i].lat, places[i].long ] )
+      .bindPopup ('<h3>' + places[i].name + '</h3>' + '<p>' + places[i].description + '<p>').addTo( mymap );
+  }
 
 
+      </script>
 
 </body>
 </html>
