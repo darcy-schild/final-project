@@ -33,16 +33,7 @@ a:hover {
 
 @media (max-width: 575.98px) {
 
-      #chart {
-          max-width: 60%;
-      }
-
-      #btngroup2 {
-          max-width: 80px;
-      }
-
-      #map1 {
-        height: 400px;
-        width: 300px;
+      #container {
+          max-width: 80%;
       }
   }
