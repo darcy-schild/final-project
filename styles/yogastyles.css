@@ -35,4 +35,8 @@ a:hover {
       #chart {
           max-width: 60%;
       }
+
+      #btngroup2 {
+          max-width: 100%;
+      }
   }
