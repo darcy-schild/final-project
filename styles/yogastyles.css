@@ -36,4 +36,9 @@ a:hover {
       #container {
           max-width: 80%;
       }
+
+      #map {
+          max-width: 80%;
+          height: 300px;
+      }
   }
